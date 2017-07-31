@@ -1,3 +1,6 @@
+import turtle
+turtle.pendown
+
 UP_ARROW = "Up"
 LEFT_ARROW = "Left"
 DOWN_ARROW = "Down"
@@ -11,20 +14,37 @@ direction = UP
 
 def up():
     global direction
+    global up
     direction = UP
-    print ('you pressed Up!')
+    print(direction)
+    return ('you pressed Up!')
 
 def left():
     global direction
+    global left
     direction = LEFT
-    print ('you pressed Left!')
+    print(direction)
+    return ('you pressed left!')
 
 def down():
     global direction
+    global down
     direction = DOWN
-    print ('you pressed Down!')
+    print(direction)
+    return ('you pressed down!')
 
 def right():
     global direction
-    direction = RIGHt
-    print ('you pressed Right!')
+    global right
+    direction = RIGHT
+    print(direction)
+    return ('you pressed right!')
+
+turtle.onkeypress(up, UP_ARROW)
+turtle.onkeypress(down, DOWN_ARROW)
+turtle.onkeypress(right, RIGHT_ARROW)
+turtle.onkeypress(left, LEFT_ARROW)
+turtle.pendown
+turtle.listen()
+
+turtle.mainloop                                                                                                                                                                                                 
